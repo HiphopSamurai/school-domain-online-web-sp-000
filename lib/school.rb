@@ -12,9 +12,9 @@ class School
     @name
   end
 
-  def roster=(roster)
-    @ROSTER << roster
-  end
+  #def roster=(roster)
+  #  @ROSTER << roster
+  #end
 
   def roster
     @ROSTER
