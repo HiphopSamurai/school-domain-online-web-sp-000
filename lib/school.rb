@@ -1,34 +1,28 @@
 class School
 
-  #attr_reader :name
-
-  #@ROSTER = {}
   def initialize(name)
     @name = name
-    @ROSTER = {}
+    @roster = {}
   end
-
-  def name
-    @name
-  end
-
-  #def roster=(roster)
-  #  @ROSTER << roster
-  #end
 
   def roster
-    @ROSTER
+    @roster
   end
 
   def add_student(name, grade)
-    @ROSTER[grade] = name
+    @name = name
+    @grade = grade
+    if @roster.include?(grade) == false
+      @roster[grade] = []
+    end
+    @roster[grade] << name
   end
 
   def grade(grade)
-    @ROSTER.values_at(grade)
+    @roster[grade]
   end
 
   def sort
-    @ROSTER.sort
+    @roster.sort
   end
 end
